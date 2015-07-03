@@ -94,7 +94,7 @@ Ran 1 test in 0.000s
 OK
 ```
 
-Also note that in future, even if we change `matchScore` to another implementation, we can still run the tests to make sure we haven't broken anything - this is another key feature of testing, it allows us to quickly and automatically make sure we haven't broken stuff as we work.
+Also note that in future, even if we change `matchScore` to another implementation, we can still run the tests to make sure we haven't broken anything - this is another key feature of testing: it allows us to quickly and automatically make sure we haven't broken stuff as we work.
 
 ### Problem 2
 
@@ -136,7 +136,7 @@ Ran 2 tests in 0.001s
 FAILED (failures=1)
 ```
 
-Something isn't right with the implementation of `matchScore` More immediately than worrying about future bugs or reusing code, testing lets us validate our code in a concrete, reproducible way, and ensure that it actually does what we think it does.
+Something isn't right with the implementation of `matchScore`. More immediately than worrying about future bugs or reusing code, testing lets us validate our code in a concrete, reproducible way, and ensure that it actually does what we think it does.
 
 But so now - we need to fix our function so it passes the tests! The first test we wrote checked to make sure the correct matches were working - but what about mismatches? Let's add another test:
 
@@ -254,17 +254,17 @@ Without a test suite, I would have to sit and examine these changes carefully, a
 
 ### Bonus Round
 
-### BR Problem 1
+### Bonus Round Problem 1
 
 > In genomics, we often want the 'reverse complement' of a genome; to construct this, take a genome and do the following:
 > - reverse the order of the characters
 > - swap A for T, and G for C.
 >
 > So for example, ACCG becomes CGGT.
-> Imagine the `matching.py` module contained a function called `reverseComplement`. This function should at least be able to get the above example right. Write a test in `tests.py` that check for this behavior; don't bother actually writing the `reverseComplement` function.
+> Imagine the `matching.py` module contained a function called `reverseComplement`. This function should at least be able to get the above example right. Write a test in `matching_tests.py` that checks for this behavior; don't bother actually writing the `reverseComplement` function.
 
 What you just did is an example of **test driven design** - writing down what we want our function to do by defining the tests that check that that's the case *first*. TDD has the great advantage of helping us fight confirmation bias when coding; if you write a function first, there's a great temptation to run it once, see that it superficially looks okay, and call it done. Having the tests in place forces you to check that all the expected behavior actually works.
 
-### BR Problem 2
+### Bonus Round Problem 2
 
 > Write the `reverseComplement` function, and make sure it passes the test you wrote in the last problem.
